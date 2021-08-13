@@ -1,0 +1,24 @@
+{
+  "name": "dmc-pathfinder-macros",
+  "title": "DrMcCoy's Pathfinder Macros",
+  "description": "A collection of useful macros for Pathfinder 1e",
+  "author": "Sven \"DrMcCoy\" Hesse",
+  "authors": [
+    {
+      "name": "Sven \"DrMcCoy\" Hesse",
+      "email": "drmccoy@drmccoy.de",
+      "url": "https://drmccoy.de/"
+    }
+  ],
+  "version": "0.0.0",
+  "minimumCoreVersion": "0.8.8",
+  "compatibleCoreVersion": "0.8.8",
+  "manifestPlusVersion": "1.2.0",
+  "url": "https://github.com/DrMcCoy/dmc-pathfinder-macros",
+  "manifest": "https://github.com/DrMcCoy/dmc-pathfinder-macros/releases/latest/download/module.json",
+  "download": "https://github.com/DrMcCoy/dmc-pathfinder-macros/releases/latest/download/module.zip",
+  "license": "./LICENSE",
+  "readme": "./README.md",
+  "bugs": "https://github.com/DrMcCoy/dmc-pathfinder-macros/issues",
+  "changelog": "https://github.com/DrMcCoy/dmc-pathfinder-macros/raw/main/ChangeLog"
+}
