@@ -1,0 +1,19 @@
+{
+  "_id": "3gKbk64NG4IRXJGt",
+  "name": "Roll Caster Level (Secondary)",
+  "type": "script",
+  "author": "yl26U6KzvTh5KI2R",
+  "img": "systems/pf1/icons/spells/wind-grasp-eerie-3.jpg",
+  "scope": "global",
+  "folder": null,
+  "sort": 0,
+  "permission": {
+    "default": 2
+  },
+  "flags": {
+    "advanced-macros": {
+      "runAsGM": false
+    }
+  },
+  "script": "roll_caster_level-secondary.js"
+}

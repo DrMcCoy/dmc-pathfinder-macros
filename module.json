@@ -20,5 +20,14 @@
   "license": "./LICENSE",
   "readme": "./README.md",
   "bugs": "https://github.com/DrMcCoy/dmc-pathfinder-macros/issues",
-  "changelog": "https://github.com/DrMcCoy/dmc-pathfinder-macros/raw/main/ChangeLog"
+  "changelog": "https://github.com/DrMcCoy/dmc-pathfinder-macros/raw/main/ChangeLog",
+  "packs": [
+    {
+      "name": "macros",
+      "label": "DMC Macros",
+      "path": "packs/dmc-macros.db",
+      "private": false,
+      "entity": "Macro"
+    }
+  ]
 }

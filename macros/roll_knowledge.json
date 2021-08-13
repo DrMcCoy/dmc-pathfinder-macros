@@ -1,0 +1,19 @@
+{
+  "_id": "1GUO9KdoB3o1EGy1",
+  "name": "Roll Knowledge",
+  "type": "script",
+  "author": "yl26U6KzvTh5KI2R",
+  "img": "icons/commodities/biological/organ-brain-pink-purple.webp",
+  "scope": "global",
+  "folder": null,
+  "sort": 0,
+  "permission": {
+    "default": 2
+  },
+  "flags": {
+    "advanced-macros": {
+      "runAsGM": false
+    }
+  },
+  "script": "roll_knowledge.js"
+}

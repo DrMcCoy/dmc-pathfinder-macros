@@ -1,0 +1,19 @@
+{
+  "_id": "GWQVp7JINUCjJBFs",
+  "name": "Roll Concentration (Spell-Like)",
+  "type": "script",
+  "author": "yl26U6KzvTh5KI2R",
+  "img": "systems/pf1/icons/skills/light_01.jpg",
+  "scope": "global",
+  "folder": null,
+  "sort": 0,
+  "permission": {
+    "default": 2
+  },
+  "flags": {
+    "advanced-macros": {
+      "runAsGM": false
+    }
+  },
+  "script": "roll_concentration-spell-like.js"
+}

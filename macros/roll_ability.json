@@ -1,0 +1,19 @@
+{
+  "_id": "2ttL3vQpefIAvgrm",
+  "name": "Roll Ability",
+  "type": "script",
+  "author": "yl26U6KzvTh5KI2R",
+  "img": "icons/skills/melee/unarmed-punch-fist-yellow-red.webp",
+  "scope": "global",
+  "folder": null,
+  "sort": 0,
+  "permission": {
+    "default": 2
+  },
+  "flags": {
+    "advanced-macros": {
+      "runAsGM": false
+    }
+  },
+  "script": "roll_ability.js"
+}
