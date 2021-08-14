@@ -1,3 +1,8 @@
+Saturday, 2021-08-14 (Version 0.2.0)
+	- Set hard dependency on the PF1 Foundry VTT system module
+	- Added CL check and concentration macros that query the user for the
+	  spellbook to use
+
 Saturday, 2021-08-14 (Version 0.1.0)
 	- Initial release
 
