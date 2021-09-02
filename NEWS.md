@@ -1,3 +1,10 @@
+Changes in DrMcCoy's Pathfinder Macros 0.2.1
+============================================
+
+This release adds the skill "Disable Device" to the skill check macros, as it
+was missing previously.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.2.0
 ============================================
 
