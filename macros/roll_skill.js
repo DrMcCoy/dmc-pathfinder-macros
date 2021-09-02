@@ -4,7 +4,7 @@
 // Example actorNames: 'actorNames: ["Bob", "John"],'
 const c = {
 	actorNames: [],
-	skills: ["acr", "apr", "blf", "clm", "dip", "dis", "esc", "hea", "int", "lin", "per", "sen", "spl", "ste", "sur", "swm", "umd"],
+	skills: ["acr", "apr", "blf", "clm", "dev", "dip", "dis", "esc", "hea", "int", "lin", "per", "sen", "spl", "ste", "sur", "swm", "umd"],
 };
 // END CONFIGURATION
 
