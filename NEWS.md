@@ -1,3 +1,10 @@
+Changes in DrMcCoy's Pathfinder Macros 0.2.2
+============================================
+
+This is a maintenance release that simply updates the compatible Foundry VTT
+version to 0.8.9.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.2.1
 ============================================
 
