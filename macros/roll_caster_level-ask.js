@@ -9,6 +9,8 @@ if (tokens.length !== 1) {
 
 	if (spells.usedSpellbooks.length < 1) {
 		ui.notifications.warn("You don't cast.");
+	} else if (spells.usedSpellbooks.length == 1) {
+		rollCheck(actor, spells.usedSpellbooks[0]);
 	} else {
 		const buttons = {};
 
