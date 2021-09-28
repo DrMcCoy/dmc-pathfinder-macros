@@ -1,0 +1,55 @@
+# Whenever we push to a v*-tag, we want to automatically create a release.
+# This release should include the module.json and a generated module.zip.
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Extract the repository name from the author/repo slug
+    - name: Get repository name
+      id : get_repo_name
+      run: echo "REPOSITORY_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
+      shell: bash
+
+    # Get part of the tag after the `v`
+    - name: Extract tag version number
+      id: get_version
+      uses: battila7/get-version-action@v2
+
+    # Assemble the macros database
+    - name: Assemble macros database
+      id: assemble_database
+      run: ( mkdir packs; cd macros; ../.github/workflows/assemble.sh *.json > ../packs/dmc-macros.db )
+
+    # Remove unassembled macros
+    - name: Remove unassembled macros
+      id: remove_macros
+      run: rm -rf macros
+
+    # Create a zip file with all files required by the module to add to the release
+    - name: Create release zip
+      id: create_zip
+      run: ( cd ..; zip -r9 ${{ env.REPOSITORY_NAME }}/module.zip ${{ env.REPOSITORY_NAME }}/* )
+
+    # Grab the relevant part out of the NEWS.md file
+    - name: Grab NEWS
+      id: grab_news
+      run: csplit -q NEWS.md '/====/' '{*}' && cat xx01 | head -n-3 | tail -n+3 > version-news.md
+
+    # Create a release for this specific version
+    - name: Create release
+      id: create_version_release
+      uses: ncipollo/release-action@v1
+      with:
+        allowUpdates: true
+        name: "DrMcCoy's Pathfinder Macros ${{steps.get_version.outputs.version-without-v}}"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        artifacts: './module.json, ./module.zip'
+        bodyFile: './version-news.md'
