@@ -42,7 +42,7 @@ if (tokens.length !== 1) {
 
 		new Dialog({
 			title: "Roll Knowledge!",
-			content: "<p>Choose a knowledge skill</p>",
+			content: `<p>Choose a knowledge skill for actor: <strong>${caster.actor.name}</strong></p>`,
 			buttons: buttons,
 		}).render(true);
 	}

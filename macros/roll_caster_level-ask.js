@@ -25,7 +25,7 @@ if (tokens.length !== 1) {
 
 		new Dialog({
 			title: "Roll Caster Level Check!",
-			content: "<p>Choose a spellbook</p>",
+			content: `<p>Choose a spellbook for actor: <strong>${actor.name}</strong></p>`,
 			buttons: buttons,
 		}).render(true);
 
