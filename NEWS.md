@@ -1,3 +1,11 @@
+Changes in DrMcCoy's Pathfinder Macros 0.2.3
+============================================
+
+In this release, the macros that ask the user for a spellbook recognite when
+the token's actor has only a single spellbook and use that instead of asking.
+Also, all dialog boxes now include the actor name.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.2.2
 ============================================
 

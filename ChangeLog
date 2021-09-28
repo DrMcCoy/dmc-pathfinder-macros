@@ -1,3 +1,7 @@
+Wednesday, 2021-09-29 (Version 0.2.3)
+	- Changed spellbook asking macros to not ask if actor has only one
+	- Added actor name to all dialogs
+
 Thursday, 2021-09-28 (Version 0.2.2)
 	- Updated compatible Foundry VTT version to 0.8.9
 
