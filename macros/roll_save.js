@@ -9,7 +9,7 @@ const c = {
 const tokens = canvas.tokens.controlled;
 let actors = tokens.map(o => o.actor);
 if (!actors.length && c.actorNames.length) actors = game.actors.filter(o => c.actorNames.includes(o.name));
-if (!actors.length) actors = game.actors.filter(o => o.isPC && o.testUserPermission(game.user, "OWNER"));
+if (!actors.length) actors = game.actors.filter(o => o.type == "character" && o.testUserPermission(game.user, "OWNER"));
 actors = actors.filter(o => o.testUserPermission(game.user, "OWNER"));
 
 if (!actors.length) ui.notifications.warn("No applicable actor(s) found");
