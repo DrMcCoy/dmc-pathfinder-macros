@@ -1,3 +1,10 @@
+Changes in DrMcCoy's Pathfinder Macros 0.3.0
+============================================
+
+This release fixes the macros for version 9 of Foundry VTT. Version 9 is also
+now required. If you can't upgrade, please stay at 0.2.3.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.2.3
 ============================================
 
