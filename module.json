@@ -11,11 +11,11 @@
     }
   ],
   "version": "0.2.3",
-  "minimumCoreVersion": "0.8.8",
-  "compatibleCoreVersion": "0.8.9",
+  "minimumCoreVersion": "9.236",
+  "compatibleCoreVersion": "9",
   "manifestPlusVersion": "1.2.0",
   "system": [ "pf1" ],
-  "minimumSystemVersion": "0.78.15",
+  "minimumSystemVersion": "0.80.7",
   "dependencies": [
     {
       "name": "pf1",
