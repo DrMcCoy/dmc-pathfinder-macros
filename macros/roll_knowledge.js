@@ -1,58 +1,55 @@
+// CONFIGURATION
+// If one or more tokens are selected, those will be used instead of the listed actors
+// Leave the actorNames array empty to guess the players
+// Example actorNames: 'actorNames: ["Bob", "John"],'
+const c = {
+	actorNames: [],
+	skills: ["kar", "kdu", "ken", "kge", "khi", "klo", "kna", "kno", "kpl", "pre"],
+};
+// END CONFIGURATION
+
 const tokens = canvas.tokens.controlled;
-const caster = tokens[0];
+let actors = tokens.map(o => o.actor);
+if (!actors.length && c.actorNames.length) actors = game.actors.filter(o => c.actorNames.includes(o.name));
+if (!actors.length) actors = game.actors.filter(o => o.type == "character" && o.testUserPermission(game.user, "OWNER"));
+actors = actors.filter(o => o.testUserPermission(game.user, "OWNER"));
 
-if (tokens.length !== 1) {
-	ui.notifications.warn("Please select a token");
-} else {
-	const knowledgeTypes = [
-		"Arcana",
-		"Dungeoneering",
-		"Engineering",
-		"Geography",
-		"History",
-		"Local",
-		"Nature",
-		"Nobility",
-		"Planes",
-		"Religion",
-	];
+if (!actors.length) ui.notifications.warn("No applicable actor(s) found");
+else {
+	const _roll = async function(type) {
+		let madeSound = false;
+		for (let a = 0;a < actors.length; a++) {
+			let o = actors[a];
+			let info = o.getSkillInfo(type);
+			if (!info) continue;
+			await o.rollSkill(type, { event: new MouseEvent({}), skipDialog: true, noSound: madeSound, });
+			madeSound = true;
+		}
+	};
 
-	const knowledgeData = [];
-	knowledgeTypes.forEach((type) => {
-		const knowledgeDatum =
-			caster.actor.data.data.skills[`k${type.toLowerCase().substring(0, 2)}`];
-		knowledgeDatum.name = type;
-		knowledgeData.push(knowledgeDatum);
-	});
+	const buttons = c.skills.reduce((cur, s) => {
+		let info;
+		for (let o of actors) {
+			info = o.getSkillInfo(s);
+			if (info) break;
+		}
+		if (!info || !info.rank) return cur;
+		let label = info.name;
+		cur[s] = {
+			label: label,
+			callback: () => _roll(s),
+		};
+		return cur;
+	}, {});
 
-	const knownKnowledge = knowledgeData.filter((datum) => datum.rank > 0);
-
-	if (knownKnowledge.length < 1) {
+	if (Object.keys(buttons).length < 1) {
 		ui.notifications.warn("You know nothing.");
 	} else {
-		const buttons = {};
-		knownKnowledge.forEach((type) => {
-			buttons[type.name] = {
-				label: type.name,
-				callback: () => {
-					rollCheck(type.name, type.mod);
-				},
-			};
-		});
-
+		const msg = `Choose a knowledge skill to roll for the following actor(s): <strong>${actors.map    (o => o.name).join("</strong>, <strong>")}</strong>`;
 		new Dialog({
-			title: "Roll Knowledge!",
-			content: `<p>Choose a knowledge skill for actor: <strong>${caster.actor.name}</strong></p>`,
+			title: "Roll skill",
+			content: `<p>${msg}</p>`,
 			buttons: buttons,
 		}).render(true);
 	}
-}
-
-function rollCheck(name, mod) {
-	const roll = new Roll(`1d20 + ${mod}`);
-	roll.roll();
-	roll.toMessage({
-		flavor: `Knowledge ${name} check`,
-		speaker: { alias: token.actor.data.name },
-	});
 }
