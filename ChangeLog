@@ -1,3 +1,7 @@
+Saturday, 2022-03-05 (Version 0.3.1)
+	- Changed entity to type on compendium definition
+	- Enabled dialogs for knowledge and skill checks on single actors
+
 Tuesday, 2022-01-18 (Version 0.3.0)
 	- Fixed the macros for Foundry VTT version 9:
 		- Replaced hasPerm with testUserPermission

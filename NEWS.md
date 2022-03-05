@@ -1,3 +1,11 @@
+Changes in DrMcCoy's Pathfinder Macros 0.3.1
+============================================
+
+This release enables dialogs for knowledge and skill checks on single actors.
+Additionally, the compendium definition now uses type instead of entity, since
+entity has been deprecated in Foundry VTT version 9.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.3.0
 ============================================
 
