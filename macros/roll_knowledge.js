@@ -22,7 +22,7 @@ else {
 			let o = actors[a];
 			let info = o.getSkillInfo(type);
 			if (!info) continue;
-			await o.rollSkill(type, { event: new MouseEvent({}), skipDialog: true, noSound: madeSound, });
+			await o.rollSkill(type, { event: new MouseEvent({}), skipDialog: actors.length > 1, noSound: madeSound, });
 			madeSound = true;
 		}
 	};
