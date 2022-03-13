@@ -20,7 +20,7 @@ else {
 		let madeSound = false;
 		for (let a = 0;a < actors.length; a++) {
 			let o = actors[a];
-			await o.rollAbility(type, { noSound: madeSound, });
+			await o.rollAbilityTest(type, { noSound: madeSound, });
 			madeSound = true;
 		}
 	};
