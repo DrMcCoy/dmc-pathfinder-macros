@@ -1,3 +1,10 @@
+Changes in DrMcCoy's Pathfinder Macros 0.3.2
+============================================
+
+This release replaces a call to the deprecated function rollAbility() with
+a call to rollAbilityTest().
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.3.1
 ============================================
 

@@ -1,3 +1,6 @@
+Sunday, 2022-03-13 (Version 0.3.2)
+	- Replaced deprecated call to rollAbility() with rollAbilityTest()
+
 Saturday, 2022-03-05 (Version 0.3.1)
 	- Changed entity to type on compendium definition
 	- Enabled dialogs for knowledge and skill checks on single actors
