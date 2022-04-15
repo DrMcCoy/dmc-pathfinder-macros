@@ -1,3 +1,10 @@
+Changes in DrMcCoy's Pathfinder Macros 0.3.3
+============================================
+
+This release fixes a typo in the roll knowledge macro that prevented
+"Knowledge (Religion)" from showing up.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.3.2
 ============================================
 
