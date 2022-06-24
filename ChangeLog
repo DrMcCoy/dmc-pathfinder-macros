@@ -1,3 +1,6 @@
+Friday, 2022-06-24 (Version 0.4.0)
+	- Added macros to switch on/off torch light on a token
+
 Friday, 2022-04-15 (Version 0.3.3)
 	- Fixed religion check in the roll knowledge macro
 

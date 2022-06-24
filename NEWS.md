@@ -1,3 +1,13 @@
+Changes in DrMcCoy's Pathfinder Macros 0.4.0
+============================================
+
+This release adds two new macros: "Light On" and "Light Off".
+
+"Light On" changes all selected tokens to emit a light as bright as a
+torch (6m bright and 12m dim, or 20ft bright and 40ft dim, respectively),
+and "Light Off" switches the light off again.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.3.3
 ============================================
 
