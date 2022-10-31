@@ -1,3 +1,7 @@
+Monday, 2022-10-31 (Version 0.5.0)
+	- Fixed torch light macros for Foundry VTT v10
+	- Increased required Foundry VTT version to v10
+
 Friday, 2022-06-24 (Version 0.4.0)
 	- Added macros to switch on/off torch light on a token
 

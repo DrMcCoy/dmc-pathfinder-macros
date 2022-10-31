@@ -1,3 +1,13 @@
+Changes in DrMcCoy's Pathfinder Macros 0.5.0
+============================================
+
+This is a compatibility release for Foundry VTT v10.
+
+Namely, the two macros that switch token lights on and off have been fixed
+for Foundry VTT v10. This also means that version 10 of Foundry VTT is now
+required. If you can't upgrade, please stay at 0.4.0.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.4.0
 ============================================
 
