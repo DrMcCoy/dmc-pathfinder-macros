@@ -5,8 +5,12 @@ if (!scene)
 const tokens = canvas.tokens.controlled;
 
 tokens.forEach(t => {
-	t.data.light.dim = 0;
-	t.data.light.bright = 0;
+	const update = {
+		light: {
+			dim: 0,
+			bright: 0
+		}
+	};
 
-	scene.updateEmbeddedDocuments(Token.embeddedName, [t.data]);
+	t.document.update(update).then(t.refresh());
 });

@@ -16,8 +16,12 @@ if (units === "metric")
 const tokens = canvas.tokens.controlled;
 
 tokens.forEach(t => {
-	t.data.light.dim = torch_light * 2;
-	t.data.light.bright = torch_light;
+	const update = {
+		light: {
+			dim: torch_light * 2,
+			bright: torch_light
+		}
+	};
 
-	scene.updateEmbeddedDocuments(Token.embeddedName, [t.data]);
+	t.document.update(update).then(t.refresh());
 });
