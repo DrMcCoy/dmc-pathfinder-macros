@@ -17,6 +17,6 @@ if (!actors.length) ui.notifications.warn("No applicable actor(s) found");
 else {
 	for (let a = 0;a < actors.length; a++) {
 		let o = actors[a];
-		o.rollDefenses();
+		o.displayDefenseCard();
 	}
 }
