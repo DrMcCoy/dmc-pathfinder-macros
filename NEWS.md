@@ -1,3 +1,14 @@
+Changes in DrMcCoy's Pathfinder Macros 0.6.0
+============================================
+
+This is a compatibility release for the Pathfinder 1 system version 9.4.
+
+Namely, the macro that shows the defenses card in the chat and the two macros
+that look up details about an actor's spell books have been fixed.
+
+Version 9.4 of the Pathfinder 1 system module is now required.
+
+
 Changes in DrMcCoy's Pathfinder Macros 0.5.0
 ============================================
 
