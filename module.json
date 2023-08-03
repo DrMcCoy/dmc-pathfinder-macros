@@ -14,7 +14,7 @@
   "minimumCoreVersion": 10,
   "compatibility": {
     "minimum": 10,
-    "verified": "10.288"
+    "verified": "10.303"
   },
   "relationships": {
     "systems": [{
