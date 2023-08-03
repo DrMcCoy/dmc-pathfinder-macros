@@ -5,7 +5,7 @@ if (tokens.length !== 1) {
 	ui.notifications.warn("Please select a token");
 } else {
 	let actor = tokens[0].actor;
-	let spells = actor.data.data.attributes.spells;
+	let spells = actor.system.attributes.spells;
 
 	if (spells.usedSpellbooks.length < 1) {
 		ui.notifications.warn("You don't cast.");
