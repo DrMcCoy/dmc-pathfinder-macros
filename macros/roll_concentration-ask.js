@@ -17,8 +17,8 @@ if (tokens.length !== 1) {
 		spells.usedSpellbooks.forEach((type) => {
 			let spellbook = getProperty(spells, `spellbooks.${type}`);
 
-			buttons[spellbook.name] = {
-				label: spellbook.name,
+			buttons[spellbook.label] = {
+				label: spellbook.label,
 				callback: () => {
 					rollCheck(actor, type);
 				},
